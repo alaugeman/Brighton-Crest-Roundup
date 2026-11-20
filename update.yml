@@ -20,7 +20,7 @@ jobs:
       STATION_NAME: Brighton Crest
       LOCAL_TZ: America/Denver
       # NWS asks API users to identify themselves; put your email here.
-      CONTACT: "brc-weather-charts (you@example.com)"
+      CONTACT: "brc-weather-charts (alex.laugeman@gmail.com)"
     steps:
       - uses: actions/checkout@v4
 
