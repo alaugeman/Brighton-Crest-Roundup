@@ -19,7 +19,7 @@ jobs:
       STATION_ID: BRC
       STATION_NAME: Brighton Crest
       LOCAL_TZ: America/Denver
-      CONTACT: "brc-weather-charts (alex.laugeman@gmail.com)"
+      CONTACT: "brc-weather-charts (you@example.com)"
     steps:
       - uses: actions/checkout@v4
 
