@@ -19,7 +19,7 @@ jobs:
       STATION_ID: BRC
       STATION_NAME: Brighton Crest
       LOCAL_TZ: America/Denver
-      CONTACT: "brc-weather-charts (you@example.com)"
+      CONTACT: "brc-weather-charts (alex.laugeman@gmail.com)"
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +32,11 @@ jobs:
 
       - name: Fetch new observations
         run: python scripts/fetch.py
-
+      - name: Fetch snow data (Synoptic)
+        run: python scripts/fetch_synoptic.py
+        continue-on-error: true
+        env:
+          SYNOPTIC_TOKEN: ${{ secrets.SYNOPTIC_TOKEN }}
       - name: Build charts
         run: python scripts/plot.py
 
